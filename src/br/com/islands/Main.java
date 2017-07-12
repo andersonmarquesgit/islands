@@ -39,8 +39,8 @@ public class Main {
 		};
 		
 		Island I = new Island();
-		System.out.println("Quantidade de ilhas em P: " + I.countIslands(P));
-		System.out.println("Quantidade de ilhas em G: " + I.countIslands(G));
-		System.out.println("Quantidade de ilhas em M: " + I.countIslands(M));
+		System.out.println("Quantidade de ilhas em P: " + I.countIslands(P) + " - Tamanho da area em P: " + I.area(P));
+		System.out.println("Quantidade de ilhas em G: " + I.countIslands(G) + " - Tamanho da area em G: " + I.area(G));
+		System.out.println("Quantidade de ilhas em M: " + I.countIslands(M) + " - Tamanho da area em M: " + I.area(M));
 	}
 }
