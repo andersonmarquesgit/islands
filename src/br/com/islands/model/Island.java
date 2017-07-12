@@ -14,12 +14,11 @@ public class Island {
 		if ((row >= 0) && (row < qttRow) && (col >= 0) && (col < qttCol)
 				&& (matrix[row][col] == 0 && !cellVisited[row][col])) {
 			return true;
-		//TODO:CORRIGIR CONTAGEM DE PERIMETRO FORA DA MATRIZ	
-//		}else if (((row < 0) && (col >= 0) && (col < qtdCol)) 
-//				|| ((row >= 0) && (row < qtdRow) && (col > qtdCol)) 
-//				|| ((row >= 0) && (row < qtdRow) && (col >= 0) && (col < qtdCol) && !cellVisited[row][col]) 
-//				|| ((row >= 0) && (row < qtdRow) && (col < 0))) {
-//			return true;
+		}else if(((row == -1) && (col >= 0))
+				|| ((row >= 0) && (col >= qttCol))
+				|| ((row >= qttRow))
+				|| ((col < 0))) {
+			return true;
 		}
 		return false;
 	}
@@ -91,7 +90,7 @@ public class Island {
 		
 		boolean visited[][] = new boolean[qttRow][qttCol];
 
-		int count = 1;
+		int count = 0;
 		for (int i = 0; i < qttRow; ++i) {
 			for (int j = 0; j < qttCol; ++j) {
 				if (matrix[i][j] >= 1 && !visited[i][j]) {
